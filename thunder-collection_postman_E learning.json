@@ -1,0 +1,209 @@
+{
+    "info": {
+        "_postman_id": "0c7d8bf7-cfee-4691-b675-8bd893c198cb",
+        "name": "E learning",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "User",
+            "item": [
+                {
+                    "name": "admin",
+                    "item": [
+                        {
+                            "name": "create course",
+                            "request": {
+                                "method": "POST",
+                                "url": {
+                                    "raw": "http://localhost:5000/api/course/new",
+                                    "path": [
+                                        "api",
+                                        "course",
+                                        "new"
+                                    ],
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "5000"
+                                },
+                                "header": [
+                                    {
+                                        "key": "token",
+                                        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODFmMTg1MTM5ODZjMzY4ODJlMDc0MmIiLCJpYXQiOjE3NDY4Nzg4MzIsImV4cCI6MTc0ODE3NDgzMn0.TC6vItQwPqyb-ughUraOl1aUPk-X8BbeC4Cz1m5EESU"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "formdata",
+                                    "formdata": [
+                                        {
+                                            "key": "title",
+                                            "value": "Ecommerce",
+                                            "type": "default"
+                                        },
+                                        {
+                                            "key": "description",
+                                            "value": "Description for ecommerce",
+                                            "type": "default"
+                                        },
+                                        {
+                                            "key": "category",
+                                            "value": "Web Dev",
+                                            "type": "default"
+                                        },
+                                        {
+                                            "key": "createdBy",
+                                            "value": "Radhe ragini",
+                                            "type": "default"
+                                        },
+                                        {
+                                            "key": "duration",
+                                            "value": "5",
+                                            "type": "default"
+                                        },
+                                        {
+                                            "key": "price",
+                                            "value": "1299",
+                                            "type": "default"
+                                        },
+                                        {
+                                            "key": "file",
+                                            "src": "c:\\Users\\Ragini Singh\\Downloads\\EasyLearning Website.pptx",
+                                            "type": "file"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Register user",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:5000/api/user/register",
+                            "path": [
+                                "api",
+                                "user",
+                                "register"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"name\":\"RadheKrishna\",\n  \"email\":\"raginisingh41491@gmail.com\",\n  \"password\":\"password\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "verify user",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:5000/api/user/verify",
+                            "path": [
+                                "api",
+                                "user",
+                                "verify"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"activationToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Im5hbWUiOiJSYWRoZUtyaXNobmEiLCJlbWFpbCI6InJzNTgwMEBzcm1pc3QuZWR1LmluIiwicGFzc3dvcmQiOiIkMmIkMTAkR0JNVzVHQ2pPb0dWZHR5TnVlRkxpZS54U3k1WkkubWRySkZZNXBYSUF6Mll5bHVtOUJjSG0ifSwib3RwIjo5OTU2NzIsImlhdCI6MTc0Njg2ODI0OSwiZXhwIjoxNzQ2ODY4NTQ5fQ.icAE4fye6dMcyb2GS37OeckFWqBt2M00yga5nM98PYE\",\n  \"otp\": 995672\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "login",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:5000/api/user/login",
+                            "path": [
+                                "api",
+                                "user",
+                                "login"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000"
+                        },
+                        "header": [
+                            {
+                                "key": "token",
+                                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODFmMTg1MTM5ODZjMzY4ODJlMDc0MmIiLCJpYXQiOjE3NDY4Nzk3NjEsImV4cCI6MTc0ODE3NTc2MX0.9ABnWZBL6mQyuXq6I1PphIVTV0wRC6YLsMimUaFDpgU"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"email\":\"rs5800@srmist.edu.in\",\n  \"password\":\"password\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "myProfile",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:5000/api/user/me",
+                            "path": [
+                                "api",
+                                "user",
+                                "me"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000"
+                        },
+                        "header": [
+                            {
+                                "key": "token",
+                                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODFmMTg1MTM5ODZjMzY4ODJlMDc0MmIiLCJpYXQiOjE3NDY4Njg4NzAsImV4cCI6MTc0ODE2NDg3MH0.9OlSkSGSaoneQsG4EHMtGhvKoeda24p2t5n5z2Fn7N0"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"activationToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Im5hbWUiOiJSYWRoZUtyaXNobmEiLCJlbWFpbCI6InJzNTgwMEBzcm1pc3QuZWR1LmluIiwicGFzc3dvcmQiOiIkMmIkMTAkR0JNVzVHQ2pPb0dWZHR5TnVlRkxpZS54U3k1WkkubWRySkZZNXBYSUF6Mll5bHVtOUJjSG0ifSwib3RwIjo5OTU2NzIsImlhdCI6MTc0Njg2ODI0OSwiZXhwIjoxNzQ2ODY4NTQ5fQ.icAE4fye6dMcyb2GS37OeckFWqBt2M00yga5nM98PYE\",\n  \"otp\": 995672\n}"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
