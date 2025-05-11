@@ -16,7 +16,7 @@ import mongoose from "mongoose";
     },
     role: {
         type: String,
-        default: "user",
+        default: "admin",
     },
     subscription:[{
         type: mongoose.Schema.Types.ObjectId,

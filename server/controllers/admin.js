@@ -4,6 +4,7 @@ import { Courses } from "../models/Courses.js";
 export const createCourse = TryCatch(async (req, res) => {
     const { title, description, category, createdBy, duration, price } = req.body;
 
+    console.log(req.body);
     const image = req.file;
 
     await Courses.create({
